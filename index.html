@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinarioToHexa</title>
+    <style>
+        body{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .box{
+            flex-wrap: wrap;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgb(0, 0, 0,0.7);
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px;
+            background-color: blanchedalmond;
+        }
+        h2{
+            margin: 15px;
+            text-shadow: 0px 3px 10px rgb(0, 0, 0,0.5);
+            color: brown;
+            font-size: 35px;
+        }
+        .input{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>  
+    <div class="box">
+        <div class="NOME"><h2>BinToHexa</h2></DIV>
+            <p>Converte um valor binario em um valor Hexa</p>
+        <input class="input"  id="valor" type="number" value="00000">
+        <input  type="button" value="calcular" onclick="calcular()">
+
+        <p id="res"><strong> resultado </strong></p>
+    </div>
+    <script>
+        function calcular(){
+            var hexa = document.querySelector("input#valor")
+            var hexavalor = Number(hexa.value)
+            var res = document.querySelector('p#res')
+            res.innerHTML = `<strong>${Number.parseInt(hexavalor,2)}</strong>`
+         }
+
+
+    </script>
+</body>
+</html>
